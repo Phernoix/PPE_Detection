@@ -3,7 +3,7 @@
     Date Written: 10/08/2020
 -->
 <template>
-    <v-app class="primary" style="height: 100vh;">
+    <v-app class="primary" style="height: 130vh;">
         <div style="margin-bottom: 85px; height:100%;">
             <v-app-bar
                 app

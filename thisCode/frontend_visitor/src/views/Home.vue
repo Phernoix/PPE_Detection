@@ -16,7 +16,7 @@
         </v-snackbar>
         <v-row>
             <!--START - Resolution and Media Settings-->
-            <v-col cols="4" id="settings">
+            <v-col cols="3" id="settings">
                 <!-- Resolution Selection -->
                 <resolution-selection
                     ref="resolutionSelection"
@@ -29,12 +29,20 @@
                     @mediaReceived="changeMediaSource"
                     :devices="devices"
                 ></media-selection>
+                <v-col class="d-flex justify-center pb-2">
+                <v-btn
+                                @click="toggle"
+                                color="blue darken-3 white--text" size="lg">
+                                <v-icon>mdi-fullscreen</v-icon>
+                                Fullscreen
+                </v-btn>
+                </v-col>
             </v-col>
             <!--END - Resolution and Media Settings-->
             <!--START - Camera Display and Controls-->
             <v-col class="px-5">
                 <!--START - Camera Display-->
-                <v-row class="py-5">
+                <v-row class="py-5 mr-7">
                     <v-col >
                         <div id="cameraDisplay">
                             <fullscreen
@@ -70,15 +78,8 @@
                 <!--END - Camera Display-->
                 <!--START - Camera Controls-->
                 <v-row class="pb-6">
-                    <v-col>
-                        <div class="d-flex justify-center" id="cameraControls">
-                            <v-btn
-                                @click="toggle"
-                                color="blue darken-3 white--text"
-                            >
-                                <v-icon>mdi-fullscreen</v-icon>
-                                Fullscreen
-                            </v-btn>
+                    <v-col class="d-flex justify-center">
+                        <div  id="cameraControls">
                             <!-- <v-btn
                                 @click="toggleHorizontalFlip"
                                 color="lime darken-4 white--text"
